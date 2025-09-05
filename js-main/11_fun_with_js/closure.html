@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur Chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">orange</button>
+    <button id="green">green</butto>
+    
+</body>
+
+<script>
+    // function outer(){
+    //     let x =10;
+    //     function inner(){
+    //         console.log(x);
+            
+    //     }
+    //     inner();
+    // }
+    // outer();
+
+
+    function makefunc(){
+        const name ="mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+    const myfunc = makefunc();
+    myfunc(); 
+
+
+
+
+</script>
+
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor=`orange`
+
+    // }
+    //  document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor=`green`
+
+    // }
+        function clickhandler(color){
+    return function clickhandler(color){
+        document.body.style.backgroundcolor = `${color}`
+    }
+}
+    document.getElementById('orange').onlcick = clickhandler("orange")
+    document.getElementById('green').onlcick = clickhandler("green")
+    </script>
+</html>
